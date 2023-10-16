@@ -11,15 +11,14 @@ public class Main {
         Scanner userInput = new Scanner(System.in);
         System.out.println("what bedtime story would you like to read? ");
         System.out.println("Goldilocks");
-        String goldilocks = userInput.nextLine();
         System.out.println("Hansel and Gretel");
-        String hanselAndGretel = userInput.nextLine();
         System.out.println("Mary had a little lamb");
-        String  maryhadALittleLamb = userInput.nextLine();
+        String storyBook = userInput.nextLine();
+
 
         FileInputStream fis;
 
-        if (goldilocks.equalsIgnoreCase("Goldilocks")) {
+        if (storyBook.equalsIgnoreCase("Goldilocks")) {
 
             try {
                 fis = new FileInputStream("src/main/resources/goldilocks.txt");
@@ -37,7 +36,7 @@ public class Main {
             }
 
         }
-        else if(hanselAndGretel.equalsIgnoreCase("Hansel and Gretel")){
+        else if(storyBook.equalsIgnoreCase("Hansel and Gretel")){
 
             try {
                 fis = new FileInputStream("src/main/resources/hansel_and_gretel.txt");
@@ -55,7 +54,7 @@ public class Main {
             }
 
         }
-        else if(maryhadALittleLamb.equalsIgnoreCase("Mary had a little lamb")){
+        else if(storyBook.equalsIgnoreCase("Mary had a little lamb")){
             try {
                 fis = new FileInputStream("src/main/resources/mary_had_a_little_lamb.txt");
                 Scanner scanner = new Scanner(fis);
